@@ -1,33 +1,44 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #030303, #44ee2e); /* Gradiente rosa suave */
+    color: #333;
+    overflow-x: hidden;
+  }
 
-h1 {
-    font-size: 5.5em;
-    color: blue;
-    margin-bottom: 10px;
-  }
-  .heart {
-    color: #000000; /* Vermelho intenso */
-    font-size: 3em;
-    animation: heartBeat 2s infinite;
-  }
-  
-  .love-topic {
-    color: #00ff88; /* Vermelho intenso */
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 1.3em;
-    color: #00ff88;
-    line-height: 1.8em;
-    margin-bottom: 15px;
-  }
-  footer {
+  header {
+    background: linear-gradient(to right, #ffffff, #3713ff); /* Gradiente vermelho intenso */
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    background: linear-gradient(to right, #f2fe49, #ff6b6b); /* Gradiente vermelho intenso */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: #fff; /* Texto branco */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+
+
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Branco */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .signature {
+    font-style: italic;
+    color: #00ffff; /* Vermelho intenso */
+    font-size: 1.2em;
+    margin-top: 20px;
   }
