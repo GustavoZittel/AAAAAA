@@ -22,3 +22,12 @@ h1 {
     line-height: 1.8em;
     margin-bottom: 15px;
   }
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #f2fe49, #ff6b6b); /* Gradiente vermelho intenso */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff; /* Texto branco */
+  }
