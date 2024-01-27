@@ -3,33 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ana2</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #87CEEB; /* Sky Blue */
+    }
+
+    #flower-container {
+      position: relative;
+    }
+
+    .petal {
+      position: absolute;
+      background-color: #FFD700; /* Gold */
+      width: 40px;
+      height: 80px;
+      border-radius: 50%;
+      transform-origin: 50% 100%;
+      animation: bloom 3s ease-out infinite alternate;
+    }
+
+    @keyframes bloom {
+      0% {
+        transform: scaleY(0.2);
+      }
+      100% {
+        transform: scaleY(1);
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Ana sebosa</h1>
-  </header>
+  <div id="flower-container">
+    <div class="petal" style="left: 20px;"></div>
+    <div class="petal" style="left: 60px;"></div>
+    <div class="petal" style="left: 100px;"></div>
+    <div class="petal" style="left: 140px;"></div>
+  </div>
 
-  <main>
-    
+  <script>
+    // JavaScript para gerar as pétalas da flor dinamicamente
+    document.addEventListener('DOMContentLoaded', function () {
+      const flowerContainer = document.getElementById('flower-container');
+      const petalCount = 4;
 
-    <center> <p center class="heart">💖💖💖</p></center>
-    <center><p class="love-topic">Eu q amo mais, chata</p></center>
-    <p>Não há palavras suficientes para expressar o quanto você significa para mim. O amor que sinto por você transcende as barreiras do tempo e espaço, é uma chama constante que queima intensamente em meu coração.
-
-        Desde o momento em que nossos caminhos se cruzaram, minha vida ganhou uma nova dimensão. Você trouxe consigo não apenas alegria e felicidade, mas também uma profunda compreensão do que é o verdadeiro amor.Vc é uma sebosa, uma oportunidade de criar memórias que guardarei para sempre.
-        
-        Seu sorriso é como um raio de sol iluminando até os dias mais nublados. Sua presença é como uma canção suave que embala minha alma. Em cada gesto, em cada olhar, encontro motivos para me apaixonar ainda mais.</p>
-
-    <center>
-    <p class="heart">💖💖💖</p>
-    </center>
-  </main>
-
-  <footer>
-    &copy; Te Amo Ana
-  </footer>
-
+      for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        petal.style.transform = `rotate(${(360 / petalCount) * i}deg)`;
+        flowerContainer.appendChild(petal);
+      }
+    });
+  </script>
 </body>
 </html>
