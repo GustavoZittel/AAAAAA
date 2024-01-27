@@ -1,3 +1,18 @@
+
 h1 {
+    font-size: 5.5em;
     color: blue;
-}
+    margin-bottom: 10px;
+  }
+  .heart {
+    color: #000000; /* Vermelho intenso */
+    font-size: 3em;
+    animation: heartBeat 2s infinite;
+  }
+  
+  .love-topic {
+    color: #00ff88; /* Vermelho intenso */
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
